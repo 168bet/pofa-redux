@@ -22,7 +22,7 @@ const getSlide = config => {
 
 const renderSlides = () => {
   const sliderElement = sliderConfig.map((config) =>
-    getSlide(config)
+    getSlide(config),
   )
   const settings = {
     dots: true,
@@ -31,7 +31,7 @@ const renderSlides = () => {
     lazyLoad: 'ondemand',
     speed: 500,
     slidesToShow: 1,
-    slidesToScroll: 1
+    slidesToScroll: 1,
   }
   return (
     <div className='sliderContainer'>
