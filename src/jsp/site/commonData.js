@@ -54,7 +54,6 @@ var commonObj = {
 	,
 	sliceInitData : function(obj) {
 		sliceSetting.sliceInit(obj);
-		console.log(obj)
 	},
 	layerInitData : function(obj) {
 		layConfig.layInit(obj);

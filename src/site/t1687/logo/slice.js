@@ -12,7 +12,6 @@ const sliceConfig = [{
   'filePathEn': 'aW1hZ2VzL2Jhbm5lci8wLmpwZw=='
 }]
 
-  // console.log('test')
 if (typeof commonObj !== 'undefined') {
   commonObj.sliceInitData(sliceConfig)
 }

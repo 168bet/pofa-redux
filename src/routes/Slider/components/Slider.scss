@@ -1,0 +1,10 @@
+.sliderContainer {
+  background: black;
+  margin: '0 auto';
+}
+
+.sliderContainer img {
+  height: 100%;
+  width: 100%;
+  margin: 0 auto; /* it centers any block level element */
+}

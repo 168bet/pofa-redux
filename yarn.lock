@@ -2224,7 +2224,7 @@ eslint-plugin-standard@^3.0.1:
   version "3.0.1"
   resolved "https://registry.yarnpkg.com/eslint-plugin-standard/-/eslint-plugin-standard-3.0.1.tgz#34d0c915b45edc6f010393c7eef3823b08565cf2"
 
-eslint@^3.19.0:
+eslint@^3.15.0, eslint@^3.19.0:
   version "3.19.0"
   resolved "https://registry.yarnpkg.com/eslint/-/eslint-3.19.0.tgz#c8fc6201c7f40dd08941b87c085767386a679acc"
   dependencies:
@@ -2380,7 +2380,7 @@ expand-range@^1.8.1:
   dependencies:
     fill-range "^2.1.0"
 
-express@^4.14.0:
+express@^4.14.0, express@^4.14.1:
   version "4.15.2"
   resolved "https://registry.yarnpkg.com/express/-/express-4.15.2.tgz#af107fc148504457f2dca9a6f2571d7129b97b35"
   dependencies:
@@ -6054,7 +6054,17 @@ watchpack@^1.3.1:
     chokidar "^1.4.3"
     graceful-fs "^4.1.2"
 
-webpack-dev-middleware@^1.0.11, webpack-dev-middleware@^1.8.4:
+webpack-browser-log@^0.1.0:
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/webpack-browser-log/-/webpack-browser-log-0.1.0.tgz#108142318efbcb7b45a9afe0e5df9fee49fcbe1b"
+  dependencies:
+    eslint "^3.15.0"
+    express "^4.14.1"
+    webpack "^2.2.1"
+    webpack-dev-middleware "^1.10.1"
+    webpack-hot-middleware "^2.17.0"
+
+webpack-dev-middleware@^1.0.11, webpack-dev-middleware@^1.10.1, webpack-dev-middleware@^1.8.4:
   version "1.10.2"
   resolved "https://registry.yarnpkg.com/webpack-dev-middleware/-/webpack-dev-middleware-1.10.2.tgz#2e252ce1dfb020dbda1ccb37df26f30ab014dbd1"
   dependencies:
@@ -6063,7 +6073,7 @@ webpack-dev-middleware@^1.0.11, webpack-dev-middleware@^1.8.4:
     path-is-absolute "^1.0.0"
     range-parser "^1.0.3"
 
-webpack-hot-middleware@^2.13.2:
+webpack-hot-middleware@^2.13.2, webpack-hot-middleware@^2.17.0:
   version "2.18.0"
   resolved "https://registry.yarnpkg.com/webpack-hot-middleware/-/webpack-hot-middleware-2.18.0.tgz#a16bb535b83a6ac94a78ac5ebce4f3059e8274d3"
   dependencies:
@@ -6095,7 +6105,7 @@ webpack-visualizer-plugin@^0.1.11:
     react "^0.14.0"
     react-dom "^0.14.0"
 
-webpack@^2.5.1:
+webpack@^2.2.1, webpack@^2.5.1:
   version "2.5.1"
   resolved "https://registry.yarnpkg.com/webpack/-/webpack-2.5.1.tgz#61742f0cf8af555b87460a9cd8bba2f1e3ee2fce"
   dependencies:

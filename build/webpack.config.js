@@ -3,7 +3,9 @@ const webpack = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const project = require('../project.config')
-const Visualizer = require('webpack-visualizer-plugin');
+// visual the whole node_modules partition
+const Visualizer = require('webpack-visualizer-plugin')
+const WebpackBrowserLog = require('webpack-browser-log')
 
 
 const inProject = path.resolve.bind(path, project.basePath)
@@ -192,10 +194,11 @@ config.plugins.push(new HtmlWebpackPlugin({
 // ------------------------------------
 if (__DEV__) {
   config.entry.main.push(
-    `webpack-hot-middleware/client.js?path=${config.output.publicPath}__webpack_hmr`
+    `webpack-hot-middleware/client.js?path=${config.output.publicPath}__webpack_hmr&reload=true`
   )
   config.plugins.push(
     new webpack.HotModuleReplacementPlugin(),
+    new webpack.NoEmitOnErrorsPlugin(),
     new webpack.NamedModulesPlugin()
   )
 }
