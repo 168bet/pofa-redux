@@ -4,12 +4,15 @@
     "browser": true,
     "node": true
   },
-  "extends": "airbnb-base",
+  "plugins": [
+    "react"
+  ],
   "rules": {
     "semi": [2, "never"],
-    "arrow-body-style": ["error", "always"],
+    "arrow-body-style": ["error", "as-needed"],
     "no-console": 0,
     "no-undef": 0,
-    "no-underscore-dangle": 0
+    "no-underscore-dangle": 0,
+    "react/jsx-uses-vars": 1
   }
 }

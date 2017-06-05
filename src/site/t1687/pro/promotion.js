@@ -29,6 +29,6 @@
 		   "contentTw":"","contentEn":""}
         ]
    }
- ];
+ ]
 
- commonObj.proInitData(promotionConfig); 
+ commonObj.proInitData(promotionConfig) 

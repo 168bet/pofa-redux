@@ -33,8 +33,6 @@ const testsContext = require.context('./', true, /\.(spec|test)\.(js|ts|tsx)$/)
 // https://www.npmjs.com/package/karma-webpack-with-fast-source-maps
 const __karmaWebpackManifest__ = []
 const allTests = testsContext.keys()
-const changedTests = allTests.filter(path => {
-  return __karmaWebpackManifest__.indexOf(path) !== -1
-})
+const changedTests = allTests.filter(path => __karmaWebpackManifest__.indexOf(path) !== -1)
 
 ;(changedTests.length ? changedTests : allTests).forEach(testsContext)

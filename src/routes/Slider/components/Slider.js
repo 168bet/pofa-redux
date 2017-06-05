@@ -7,6 +7,7 @@ import 'slick-carousel/slick/slick-theme.css'
 
 // server config
 import sliderConfig from '../../../site/t1687/logo/slice'
+import docConfig from '../../../site/t1687/doc/aboutus'
 import common from '../../../utils/common'
 import './Slider.scss'
 
@@ -42,10 +43,28 @@ const renderSlides = () => {
   )
 }
 
+const renderAbout = () => {
+  const { id, contentZh } = docConfig[0]
+  const content = common.bs64Decode(contentZh)
+  var template = { __html: content }
+
+  return (
+    <div className='help-block' dangerouslySetInnerHTML={template} />
+  )
+}
+
 export const Slides = () => (
   <div style={{ margin: '0 auto' }} >
-    <h2>Slider</h2>
-    {renderSlides()}
+    <div className='container'>
+      <div>
+        <h2>Slider</h2>
+        {renderSlides()}
+      </div>
+      <div>
+        <h2>About Us</h2>
+        {renderAbout()}
+      </div>
+    </div>
   </div>
 )
 

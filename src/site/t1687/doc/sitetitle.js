@@ -1,1 +1,1 @@
-var doc4598723397501755642 = [{"id" : "#sitetitle","code":"sitetitle","contentZh":"PHA+5aSn5ri46ZuG5ZuiPC9wPg==","contentTw":"PHA+5aSn5ri46ZuG5ZuiPC9wPg==","contentEn":"PHA+5aSn5ri46ZuG5ZuiPC9wPg=="}]; commonObj.initData(doc4598723397501755642); 
+var doc4598723397501755642 = [{"id" : "#sitetitle","code":"sitetitle","contentZh":"PHA+5aSn5ri46ZuG5ZuiPC9wPg==","contentTw":"PHA+5aSn5ri46ZuG5ZuiPC9wPg==","contentEn":"PHA+5aSn5ri46ZuG5ZuiPC9wPg=="}]; commonObj.initData(doc4598723397501755642) 

@@ -1,18 +1,18 @@
 
 $(function(){
 	//liveLottery.openLottery();
-});
+})
 
-jQuery.support.cors = true;
+jQuery.support.cors = true
 var liveLottery = {	
 		
 	openLottery:function(obj){
 		cms.validateToken(function(){
 			
-			var token = window.top.token;	
-		});
+			var token = window.top.token	
+		})
 
 	}
 
-};
+}
 

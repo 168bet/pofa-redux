@@ -49,6 +49,6 @@
 	   }
 	 ,
  }
- ];
+ ]
 
- commonObj.layerInitData(layerConfig); 
+ commonObj.layerInitData(layerConfig) 
