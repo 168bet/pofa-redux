@@ -11,6 +11,11 @@ import docConfig from '../../../site/t1687/doc/aboutus'
 import common from '../../../utils/common'
 import './Slider.scss'
 
+const preloadjs = `<script type="text/javascript" src="/inc/configPath.js"></script>
+<script type="text/javascript" src="/inc/sninfo.js"></script><script type="text/javascript">
+bgPage.loadLogin();</script>`
+const preloadjsTemplate = { __html: preloadjs }
+
 const getSlide = config => {
   const { filePathZh, id } = config
   const imgUrl = common.bs64Decode(filePathZh)
@@ -53,6 +58,10 @@ const renderAbout = () => {
   )
 }
 
+const importPreloadjs = () => (
+  <div dangerouslySetInnerHTML={preloadjsTemplate} />
+)
+
 export const Slides = () => (
   <div style={{ margin: '0 auto' }} >
     <div className='container'>
@@ -65,6 +74,7 @@ export const Slides = () => (
         {renderAbout()}
       </div>
     </div>
+    {importPreloadjs()}
   </div>
 )
 

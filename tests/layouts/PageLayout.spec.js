@@ -8,7 +8,7 @@ describe('(Layout) PageLayout', () => {
   })
 
   it('renders a project title', () => {
-    shallow(<PageLayout />).find('h1').should.have.text('React Redux Starter Kit')
+    shallow(<PageLayout />).find('h1').should.have.text('POFA Redux')
   })
 
   it('renders its children inside of the viewport', () => {
@@ -21,4 +21,8 @@ describe('(Layout) PageLayout', () => {
       .find('.page-layout__viewport')
       .should.contain(<Child />)
   })
+
+  it('screenshot checked!---github', () => {
+  })
 })
+

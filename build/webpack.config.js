@@ -4,7 +4,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const project = require('../project.config')
 // visual the whole node_modules partition
-const Visualizer = require('webpack-visualizer-plugin')
+// const Visualizer = require('webpack-visualizer-plugin')
 const WebpackBrowserLog = require('webpack-browser-log')
 
 
@@ -48,9 +48,9 @@ const config = {
       __TEST__,
       __PROD__,
     }, project.globals)),
-    new Visualizer({
-      filename: './statistics.html'
-    })
+    // new Visualizer({
+    //   filename: './statistics.html'
+    // })
   ],
 }
 
@@ -109,10 +109,7 @@ config.module.rules.push({
     fallback: 'style-loader',
     use: [
       {
-        loader: 'style-loader',
-      },
-      {
-        loader: 'css-loader',
+        loader: 'css-loader?sourceMap',
         options: {
           sourceMap: project.sourcemaps,
           minimize: {
@@ -131,6 +128,10 @@ config.module.rules.push({
             sourcemap: project.sourcemaps,
           },
         },
+      },
+      {
+        loader: 'postcss-loader',
+        options: { sourceMap: true },
       },
       {
         loader: 'sass-loader',
@@ -222,6 +223,13 @@ if (__PROD__) {
     new webpack.LoaderOptionsPlugin({
       minimize: true,
       debug: false,
+      options: {
+        sassLoader: {
+          includePaths: [path.resolve(__dirname, 'src', 'scss')]
+        },
+        context: '/',
+        postcss: () => [autoprefixer],
+      }
     }),
     new webpack.optimize.UglifyJsPlugin({
       sourceMap: !!config.devtool,
